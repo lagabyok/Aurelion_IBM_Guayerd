@@ -130,3 +130,9 @@ La correlación marginal de `−0.07` entre `precio_unitario` y `cantidad` confi
 🧠 Síntesis Global
 
 “Un set limpio, un análisis exploratorio riguroso y correlaciones bien interpretadas permiten traducir datos transaccionales en decisiones estratégicas tangibles.”
+
+**SITIO WEB**
+https://tienda-aurelion-dashboard.streamlit.app/
+
+<img width="1257" height="428" alt="image" src="https://github.com/user-attachments/assets/de650614-fb01-4d82-a393-4d288d32083d" />
+
