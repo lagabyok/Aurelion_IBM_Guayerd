@@ -39,6 +39,8 @@ Relación	Coeficiente	Interpretación
 importe vs precio_unitario	+0.68	Fuerte correlación positiva: el importe crece con el precio unitario.
 importe vs cantidad	+0.60	Correlación moderada positiva: la cantidad impulsa el importe total.
 cantidad vs precio_unitario	−0.07	Relación marginal: no existe correlación lineal significativa.
+<img width="915" height="790" alt="image" src="https://github.com/user-attachments/assets/18ff516c-1001-4d01-9836-9211ef926acd" />
+
 
 📌 Conclusión Clave:
 Las estrategias de aumento de precios y venta cruzada no se afectan negativamente entre sí, ya que la correlación entre cantidad y precio_unitario es prácticamente nula.
@@ -52,6 +54,8 @@ importe vs precio_unitario: tendencia lineal positiva clara (coef. 0.68).
 importe vs cantidad: pendiente positiva que confirma correlación moderada (0.60).
 
 Distribuciones: las curvas KDE en la diagonal muestran patrones no normales, con mayor concentración en valores bajos de cantidad y precio_unitario.
+<img width="1721" height="1780" alt="image" src="https://github.com/user-attachments/assets/07ed0faf-1e63-47c0-9281-500b1578c17e" />
+
 
 4️⃣ Análisis de Tendencia Temporal ⏱️
 
@@ -60,9 +64,10 @@ El gráfico “Correlación: Importe Promedio de Venta Única vs Día del Mes”
 Métrica	Valor
 Pendiente de la tendencia (roja)	−103.04
 Promedio General (azul)	22,432
+<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/dc39c617-729e-4d14-8a87-41f6d6f5ece2" />
 
 📉 Interpretación:
-Se observa una tendencia descendente muy suave en el importe promedio a lo largo del mes.
+Se observa una tendencia descendente  suave en el importe promedio a lo largo del mes.
 La alta dispersión sugiere ausencia de estacionalidad diaria clara, por lo que no se justifica una estrategia de precios o promociones basada en el día del mes.
 El impacto de la tendencia lineal es marginal.
 
