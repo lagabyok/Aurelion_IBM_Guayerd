@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tienda Aurelion - Dashboard Interactivo</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #FFE3E3; color: #333; margin: 0; padding: 0; }
+  h1 { background-color: #F24141; color: white; padding: 20px; text-align: center; margin: 0; }
+  button { margin: 10px; padding: 10px 20px; background-color: #F27979; border: none; color: white; cursor: pointer; border-radius: 5px; }
+  button:hover { background-color: #E74B3C; }
+  .chart-container {
+    display: none;
+    margin: 20px auto;
+    border: 2px solid #F24141;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>🛒 Tienda Aurelion - Dashboard Interactivo</h1>
+
+<div style="text-align:center;">
+  <button onclick="toggleChart('cat')">Ventas por Categoría</button>
+  <button onclick="toggleChart('pago')">Ventas por Medio de Pago</button>
+  <button onclick="toggleChart('ciudad')">Top 5 Ciudades</button>
+  <button onclick="toggleChart('cliente')">Top 5 Clientes</button>
+</div>
+
+<!-- Contenedores de gráficos -->
+<div id="cat" class="chart-container"></div>
+<div id="pago" class="chart-container"></div>
+<div id="ciudad" class="chart-container"></div>
+<div id="cliente" class="chart-container"></div>
+
+<script>
+// Función para alternar la visibilidad de gráficos
+function toggleChart(chartId) {
+  const charts = document.querySelectorAll('.chart-container');
+  charts.forEach(chart => {
+    chart.style.display = chart.id === chartId ? 'block' : 'none';
+  });
+}
+
+// --- Ventas por Categoría ---
+Plotly.newPlot('cat', [
+  { x: ['Alimentos'], y: [2214681], type: 'bar', name: 'Alimentos', marker: {color: '#F24141'} },
+  { x: ['Limpieza'], y: [436736], type: 'bar', name: 'Limpieza', marker: {color: '#F27979'} }
+], { title: 'Ventas por Categoría', barmode: 'group' });
+
+// --- Ventas por Medio de Pago ---
+Plotly.newPlot('pago', [
+  { x: ['Efectivo'], y: [934819], type: 'bar', marker: {color: '#E74B3C'} },
+  { x: ['QR'], y: [714280], type: 'bar', marker: {color: '#F24141'} },
+  { x: ['Tarjeta'], y: [460099], type: 'bar', marker: {color: '#F27979'} },
+  { x: ['Transferencia'], y: [542219], type: 'bar', marker: {color: '#CBC8CB'} }
+], { title: 'Ventas por Medio de Pago', barmode: 'group' });
+
+// --- Top 5 Ciudades (sin Córdoba) ---
+Plotly.newPlot('ciudad', [
+  { x: ['Río Cuarto'], y: [792203], type: 'bar', marker: {color: '#F24141'} },
+  { x: ['Alta Gracia'], y: [481504], type: 'bar', marker: {color: '#F27979'} },
+  { x: ['Carlos Paz'], y: [353852], type: 'bar', marker: {color: '#E74B3C'} },
+  { x: ['Villa María'], y: [313350], type: 'bar', marker: {color: '#CBC8CB'} },
+  { x: ['Mendiolaza'], y: [125000], type: 'bar', marker: {color: '#FFE3E3'} }
+], { title: 'Top 5 Ciudades', barmode: 'group' });
+
+// --- Top 5 Clientes (ejemplo) ---
+Plotly.newPlot('cliente', [
+  { x: ['Cliente A'], y: [300000], type: 'bar', marker: {color: '#F24141'} },
+  { x: ['Cliente B'], y: [250000], type: 'bar', marker: {color: '#F27979'} },
+  { x: ['Cliente C'], y: [200000], type: 'bar', marker: {color: '#E74B3C'} },
+  { x: ['Cliente D'], y: [150000], type: 'bar', marker: {color: '#CBC8CB'} },
+  { x: ['Cliente E'], y: [100000], type: 'bar', marker: {color: '#FFE3E3'} }
+], { title: 'Top 5 Clientes', barmode: 'group' });
+</script>
+
+<footer style="background-color:#F24141; color:white; text-align:center; padding:15px; position:fixed; bottom:0; width:100%;">
+  © 2025 Tienda Aurelion. Gabriela Coronel - Todos los derechos reservados.
+</footer>
+
+</body>
+</html>

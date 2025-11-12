@@ -8,7 +8,7 @@ import pandas as pd
 import webbrowser
 
 # --- 1. CARGA DEL DATASET MAESTRO ---
-df = pd.read_csv("data_final/ventas_completas.csv")
+df = pd.read_csv("data_final/productos_categorias_normalizadas.csv")
 df['fecha'] = pd.to_datetime(df['fecha'])
 df['mes'] = df['fecha'].dt.month_name()
 
