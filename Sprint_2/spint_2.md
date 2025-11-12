@@ -136,3 +136,6 @@ https://tienda-aurelion-dashboard.streamlit.app/
 
 <img width="1257" height="428" alt="image" src="https://github.com/user-attachments/assets/de650614-fb01-4d82-a393-4d288d32083d" />
 
+**COLAB GRUPO 11**
+https://colab.research.google.com/drive/18lzGHLG5WPeBBs2rFUJI781bvTU_Rl66?usp=sharing
+
